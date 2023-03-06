@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="author" content="Sanofi Taiwan" />
+    <meta
+      name="description"
+      content="For Salesperson to calculate Per Diem in Sanofi Taiwan"
+    />
+    <link rel="stylesheet" href="./styles.style.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="" />
+    <title>Per Diem計算</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Per Diem計算器</h1>
+      </header>
+
+      <section class="input">
+        <h2>請選擇年份及月份</h2>
+        <form action="#" class="date">
+          <!-- 選擇年 -->
+          <section class="yearSection">
+            <label for="year">西元</label>
+            <select name="year" id="year">
+              <option value="non" selected disabled></option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+            </select>
+            <span>年</span>
+          </section>
+
+          <!-- 選擇月 -->
+          <section class="monthSection">
+            <select name="month" id="month">
+              <label for="month">請選擇月份：</label>
+              <option value="non" selected disabled></option>
+              <!-- <option value="1">1月</option>
+              <option value="2">2月</option> -->
+            </select>
+            <span>月</span>
+          </section>
+          <button class="dateQuery">查詢</button>
+        </form>
+      </section>
+
+      <section class="display"></section>
+
+      <footer></footer>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
