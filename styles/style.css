@@ -1,0 +1,221 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+}
+body header {
+  font-size: 1.3rem;
+  margin: 1rem 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header span {
+  position: relative;
+  left: 12rem;
+  top: 0.5rem;
+  font-size: 0.8rem;
+}
+body .operation {
+  margin: 0.25rem 2rem;
+  display: flex;
+}
+body .operation .input {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+body .operation .input h2 {
+  font-size: 1.7rem;
+}
+body .operation .input form {
+  display: flex;
+  margin: 0.5rem 0.2rem;
+  font-size: 1rem;
+}
+body .operation .input form #year {
+  text-align: center;
+}
+body .operation .input .dateQuery {
+  font-size: 1.1rem;
+}
+body .operation .notice {
+  flex: 1 1 200px;
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+}
+body .operation .notice .ep {
+  color: purple;
+  font-weight: 800;
+}
+body .display h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+body .display table {
+  table-layout: fixed;
+  width: 93vw;
+  text-align: center;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin-right: auto;
+  margin-left: auto;
+  /* Firefox */
+  /*新增、刪除鍵標題(th)*/
+  /*新增、刪除圖示*/
+}
+body .display table th {
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgb(203, 170, 242);
+  background: #beb6fa;
+}
+body .display table tr {
+  border-bottom: 1px solid #eae8fa;
+  height: 12.5vh;
+}
+body .display table tr:hover {
+  background: #efebfa;
+}
+body .display table input {
+  border: none;
+  border: 1px solid #afebfa;
+  border-radius: 5px;
+}
+body .display table select {
+  border: none;
+  border: 1px solid #afebfa;
+  border-radius: 5px;
+}
+body .display table .isHoliday {
+  background: #fff0eb;
+}
+body .display table .holiday {
+  color: red;
+}
+body .display table #tableDate {
+  width: 5vw;
+}
+body .display table #tableWeek {
+  width: 3vw;
+}
+body .display table #tableHoliday {
+  width: 7vw;
+}
+body .display table #tableSite {
+  width: 12vw;
+}
+body .display table .tableSiteInput {
+  width: 11.5vw;
+}
+body .display table #tableHour {
+  width: 6vw;
+}
+body .display table .perDim {
+  width: 5vw;
+}
+body .display table #tableParking {
+  width: 28vw;
+  padding: 0 1vw;
+}
+body .display table .tableParking {
+  text-align: left;
+  padding: 0 0.1vw;
+}
+body .display table .parkingfee {
+  width: 4.5vw;
+  margin: 0vw 0.1vw;
+  text-align: center;
+}
+body .display table .pkSpan {
+  display: inline-block;
+  text-align: center;
+}
+body .display table .pkSerial {
+  font-size: 0.5rem;
+  width: 0.95vw;
+  position: relative;
+  top: -6px;
+  right: -2px;
+}
+body .display table .emptyAlert {
+  background: #ffee80;
+  transition: all 0.5s linear;
+}
+body .display table .parkingfee input[type=number]::-webkit-outer-spin-button,
+body .display table input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .display table .parkingfee input[type=number] {
+  -moz-appearance: textfield;
+}
+body .display table #tableIcon {
+  width: 3vw;
+}
+body .display table .icon {
+  width: 1.2vw;
+  padding: 0 1px;
+  cursor: pointer;
+}
+body .display table .reason {
+  width: 25vw;
+}
+body .display table .sumTr {
+  height: 6.5vh;
+}
+body .display table .sumTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: right;
+}
+body .display table .sumTitle .sumDay {
+  color: purple;
+  padding: 0 1.25vw;
+}
+body .display table .sumAmount {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 1.5vw;
+}
+body .display table .sumAmount .sumTotal {
+  color: rgb(212, 110, 1);
+  padding: 0 0.6vw;
+}
+body .display table .totalAmount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 1.2vw;
+}
+body .display table #totalPayment {
+  font-size: 1.4rem;
+  font-weight: 750;
+  color: red;
+  padding: 0 1vw;
+}
+body .display table .reasonEmp {
+  border: 2px solid red;
+  background: yellow;
+}
+body .display .calButton {
+  display: flex;
+  justify-content: flex-start;
+}
+body .display .calButton {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+}
+body footer {
+  height: 10vh;
+}/*# sourceMappingURL=style.css.map */

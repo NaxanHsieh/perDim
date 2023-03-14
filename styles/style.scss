@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  header {
+    font-size: 1.3rem;
+    margin: 1rem 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      position: relative;
+      left: 12rem;
+      top: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+  .operation {
+    margin: 0.25rem 2rem;
+    display: flex;
+    .input {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 200px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.5rem;
+      h2 {
+        font-size: 1.7rem;
+      }
+      form {
+        display: flex;
+        margin: 0.5rem 0.2rem;
+        font-size: 1rem;
+        #year {
+          text-align: center;
+        }
+      }
+      .dateQuery {
+        font-size: 1.1rem;
+      }
+    }
+    .notice {
+      flex: 1 1 200px;
+      font-size: 0.8rem;
+      margin: 0 0.5rem;
+      .ep {
+        color: purple;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .display {
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    table {
+      table-layout: fixed;
+      width: 93vw;
+      text-align: center;
+      font-size: 1rem;
+      border: 2px solid black;
+      border-radius: 2px;
+      //   center table
+      margin-right: auto;
+      margin-left: auto;
+      th {
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgb(203, 170, 242);
+        background: #beb6fa;
+      }
+      tr {
+        border-bottom: 1px solid #eae8fa;
+        height: 12.5vh;
+      }
+      tr:hover {
+        background: #efebfa;
+      }
+      input {
+        border: none;
+        border: 1px solid #afebfa;
+        border-radius: 5px;
+      }
+      select {
+        border: none;
+        border: 1px solid #afebfa;
+        border-radius: 5px;
+      }
+      .isHoliday {
+        background: #fff0eb;
+      }
+      .holiday {
+        color: red;
+      }
+      #tableDate {
+        width: 5vw;
+      }
+      #tableWeek {
+        width: 3vw;
+      }
+      #tableHoliday {
+        width: 7vw;
+      }
+      #tableSite {
+        width: 12vw;
+      }
+      .tableSiteInput {
+        width: 11.5vw;
+      }
+      #tableHour {
+        width: 6vw;
+      }
+      .perDim {
+        width: 5vw;
+      }
+
+      #tableParking {
+        width: 28vw;
+        padding: 0 1vw;
+      }
+
+      .tableParking {
+        text-align: left;
+        padding: 0 0.1vw;
+      }
+
+      .parkingfee {
+        width: 4.5vw;
+        margin: 0vw 0.1vw;
+        text-align: center;
+      }
+
+      .pkSpan {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .pkSerial {
+        font-size: 0.5rem;
+        width: 0.95vw;
+        position: relative;
+        top: -6px;
+        right: -2px;
+      }
+
+      .emptyAlert {
+        background: #ffee80;
+        transition: all 0.5s linear;
+      }
+
+      //* Chrome, Safari, Edge, Opera */
+      .parkingfee input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      .parkingfee input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      /*新增、刪除鍵標題(th)*/
+      #tableIcon {
+        width: 3vw;
+      }
+
+      /*新增、刪除圖示*/
+      .icon {
+        width: 1.2vw;
+        padding: 0 1px;
+        cursor: pointer;
+      }
+
+      .reason {
+        width: 25vw;
+      }
+
+      .sumTr {
+        height: 6.5vh;
+      }
+
+      .sumTitle {
+        font-size: 1.15rem;
+        font-weight: 600;
+        text-align: right;
+        .sumDay {
+          color: purple;
+          padding: 0 1.25vw;
+        }
+      }
+      .sumAmount {
+        font-size: 1.15rem;
+        font-weight: 600;
+        text-align: left;
+        padding-left: 1.5vw;
+        .sumTotal {
+          color: rgb(212, 110, 1);
+          padding: 0 0.6vw;
+        }
+      }
+      .totalAmount {
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-align: right;
+        padding-right: 1.2vw;
+      }
+      #totalPayment {
+        font-size: 1.4rem;
+        font-weight: 750;
+        color: red;
+        padding: 0 1vw;
+      }
+
+      //檢查是否填寫reason (for holiday)
+      .reasonEmp {
+        border: 2px solid red;
+        background: yellow;
+      }
+    }
+    .calButton {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .calButton {
+      margin-top: 3vh;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  footer {
+    height: 10vh;
+  }
+}

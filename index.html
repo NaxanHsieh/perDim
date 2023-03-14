@@ -12,7 +12,8 @@
       name="description"
       content="For Salesperson to calculate Per Diem in Sanofi Taiwan"
     />
-    <link rel="stylesheet" href="./styles.style.css" />
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <!-- icon -->
     <link rel="shortcut icon" href="" />
     <title>Per Diem計算</title>
@@ -21,39 +22,72 @@
   <body>
     <main>
       <header>
-        <h1>Per Diem計算器</h1>
+        <h1>出差津貼計算器 (Per Diem Calculator)</h1>
+        <span>version: 202302.1</span>
       </header>
 
-      <section class="input">
-        <h2>請選擇年份及月份</h2>
-        <form action="#" class="date">
-          <!-- 選擇年 -->
-          <section class="yearSection">
-            <label for="year">西元</label>
-            <select name="year" id="year">
-              <option value="non" selected disabled></option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-            </select>
-            <span>年</span>
-          </section>
+      <section class="operation">
+        <section class="input alert alert-primary">
+          <h2>請選擇年份及月份</h2>
+          <form action="#" class="date btn btn-outline-primary">
+            <!-- 選擇年 -->
+            <section class="yearSection">
+              <label for="year">西元</label>
+              <select name="year" id="year">
+                <option value="non" selected disabled></option>
+                <!-- 由app.js計算今年及去年 -->
+              </select>
+              <span>年</span>
+            </section>
 
-          <!-- 選擇月 -->
-          <section class="monthSection">
-            <select name="month" id="month">
-              <label for="month">請選擇月份：</label>
-              <option value="non" selected disabled></option>
-              <!-- <option value="1">1月</option>
-              <option value="2">2月</option> -->
-            </select>
-            <span>月</span>
-          </section>
-          <button class="dateQuery">查詢</button>
-        </form>
+            <!-- 選擇月 -->
+            <section class="monthSection">
+              <select name="month" id="month">
+                <label for="month">請選擇月份：</label>
+                <option value="non" selected disabled></option>
+                <!-- 由app.js自動生成1~12月選項 -->
+              </select>
+              <span>月</span>
+            </section>
+          </form>
+          <button class="dateQuery btn btn-outline-primary">查詢</button>
+        </section>
+
+        <section class="notice alert alert-info">
+          <ul>
+            <li>請利用右邊選單選擇年、月</li>
+            <li>
+              平日:週一至週五或補班日僅可選擇1天或0.5天(津貼以1天<span
+                class="ep"
+                >180元</span
+              >計算)
+            </li>
+            <li>平日出差請填寫出差地點</li>
+            <li>
+              假日:週六、週日或國定假日僅可選擇1天(津貼以1天<span class="ep"
+                >380元</span
+              >計算)
+            </li>
+            <li>假日出勤/出差請說明原因</li>
+            <li>表格將自動計算金額</li>
+          </ul>
+        </section>
       </section>
 
-      <section class="display"></section>
+      <hr class="border border-info-emphasis border-1 opacity-70" />
 
+      <section class="display">
+        <!-- 由JS生成 -->
+        <div class="calButton">
+          <button id="calButton" class="btn btn-primary me-4">計算金額</button>
+          <button id="printButton" class="btn btn-success me-1">
+            列印表格
+          </button>
+          <button id="downloadButton" class="btn btn-success me-1">
+            下載表格
+          </button>
+        </div>
+      </section>
       <footer></footer>
     </main>
   </body>

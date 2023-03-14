@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="author" content="Sanofi Taiwan" />
+    <meta
+      name="description"
+      content="For Salesperson to calculate Per Diem in Sanofi Taiwan"
+    />
+    <link rel="stylesheet" href="./styles.style.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="" />
+    <title>Per Diem計算</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Per Diem計算器</h1>
+      </header>
+
+      <section class="input">
+        <h2>請選擇年份及月份</h2>
+        <form action="#" class="date">
+          <!-- 選擇年 -->
+          <section class="yearSection">
+            <label for="year">西元</label>
+            <select name="year" id="year">
+              <option value="non" selected disabled></option>
+              <!-- 由app.js計算今年及去年 -->
+            </select>
+            <span>年</span>
+          </section>
+
+          <!-- 選擇月 -->
+          <section class="monthSection">
+            <select name="month" id="month">
+              <label for="month">請選擇月份：</label>
+              <option value="non" selected disabled></option>
+              <!-- 由app.js自動生成1~12月選項 -->
+            </select>
+            <span>月</span>
+          </section>
+          <button class="dateQuery">查詢</button>
+        </form>
+      </section>
+
+      <section class="display">
+        <table>
+          <tr class="tableHeader">
+            <th>日期</th>
+            <th>星期</th>
+            <th>假期別</th>
+            <th>出差地點</th>
+            <th>津貼時數</th>
+            <th>停車費</th>
+            <th></th>
+          </tr>
+          <tr class="tableContent">
+            <td rowspan="2" class="tableDate holiday">2022年1月1日</td>
+            <td rowspan="2" class="tableWeek">一</td>
+            <td rowspan="2" class="tableHoliday">平日</td>
+            <td rowspan="2" class="tableSite">
+              <input
+                type="text"
+                class="tableSiteInput"
+                placeholder="輸入出差地點"
+              />
+            </td>
+            <td rowspan="2" class="tablePerDim">
+              <select class="perDim" id="perDim1">
+                <option class="perDimOption" value="" default></option>
+                <option class="perDimOption" value="0.5">0.5天</option>
+                <option class="perDimOption" value="1">1天</option>
+              </select>
+            </td>
+            <td class="tableParking">
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-1"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-2"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-3"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-4"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-5"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-6"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-7"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-8"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-9"
+              />
+              <input
+                type="number"
+                min="0"
+                class="parkingfee"
+                placeholder="01-10"
+              />
+            </td>
+            <td>
+              <img src="./images/plus.png" alt="delete" />
+              <img src="./images/delete.png" alt="delete" />
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <footer></footer>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
